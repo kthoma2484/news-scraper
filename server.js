@@ -4,9 +4,13 @@ var mongojs = require("mongojs");
 var request = require("request");
 var cheerio = require("cheerio");
 var exphbs = require("express-handlebars");
+var bodyParser = require("body-parser");
+var mongoose = require ("mongoose");
 
 // Initialize Express
 var app = express();
+
+
 
 // Parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -29,7 +33,7 @@ db.on("error", function(error) {
 
 // Main route (simple Hello World Message)
 app.get("/", function(req, res) {
-  res.send("Hello world");
+  res.render("index");
 });
 
 // Retrieve data from the db
