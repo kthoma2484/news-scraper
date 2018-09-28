@@ -1,4 +1,4 @@
- <style>
+ {{!-- <style>
       body { 
         background-color: lightseagreen;
         }
@@ -42,7 +42,7 @@
         padding: 1%; 
         color: white;
       }
-    </style>
+    </style> --}}
        
        <ul class="nav navbar-dark">
        <a class="navbar-brand">Mongo Scraper</a>
@@ -61,15 +61,14 @@
         <h1>CNN Health News Scraper</h1>
       <h2><i>Your personal world health news scrapper!</i></h2>
       <div id="articles"></div>
-      <div id="notes">
-      </div>
+      <div id="notes"></div>
       <button type="submit">Add</button>
     </div>
 
     
-    <script>
-        $(function() {
-  $(".change-sleep").on("click", function(event) {
+  <script>
+    $(function() {
+    $(".change-sleep").on("click", function(event) {
     var id = $(this).data("id");
     var newSleep = $(this).data("newsleep");
 
